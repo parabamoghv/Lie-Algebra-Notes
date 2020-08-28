@@ -1,0 +1,63 @@
+%\def\N{\mathbb N}
+%\def\R{\mathbb R}
+%\def\C{\mathbb C}
+%\def\Z{\mathbb Z}
+%\def\cM{\mathcal{M}}
+%\def\cN{\mathcal{N}}
+%\def\cA{\mathcal{A}}
+%\def\cP{\mathcal{P}}
+%\def\cB{\mathcal{B}}
+\def \r{\rightarrow}
+\def \l{\leftarrow}
+\def\RN{\R^\infty}
+\def\SN{S^\infty}
+
+ % tricky way to iterate macros over a list
+\def\semicolon{;}
+\def\applytolist#1{
+    \expandafter\def\csname multi#1\endcsname##1{
+        \def\multiack{##1}\ifx\multiack\semicolon
+            \def\next{\relax}
+        \else
+            \csname #1\endcsname{##1}
+            \def\next{\csname multi#1\endcsname}
+        \fi
+        \next}
+    \csname multi#1\endcsname}
+
+
+
+% \def\cA{{\cal A}} for A..Z
+\def\calc#1{\expandafter\def\csname c#1\endcsname{{\mathcal #1}}}
+\applytolist{calc}QWERTYUIOPLKJHGFDSAZXCVBNM;
+% \def\bbA{{\mathbb A}} for A..Z
+\def\bbc#1{\expandafter\def\csname bb#1\endcsname{{\mathbb #1}}}
+\applytolist{bbc}QWERTYUIOPLKJHGFDSAZXCVBNM;
+% \def\bfA{{\mathbf A}} for A..Z
+\def\bfc#1{\expandafter\def\csname bf#1\endcsname{{\mathbf #1}}}
+\applytolist{bfc}QWERTYUIOPLKJHGFDSAZXCVBNM;
+% \def\sA{{\sf A}} for A..Z
+\def\sfc#1{\expandafter\def\csname s#1\endcsname{{\sf #1}}}
+\applytolist{sfc}QWERTYUIOPLKJHGFDSAZXCVBNM;
+% \def\fA{{\mathfrak A}} for A..Z
+\def\fc#1{\expandafter\def\csname f#1\endcsname{{\mathfrak #1}}}
+\applytolist{fc}QWERTYUIOPLKJHGFDSAZXCVBNM;
+ 
+
+
+\newcommand{\abs}[1]{\left\lvert #1 \right \rvert}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\set}[2]{\left\{ #1\middle| #2\right\}}
+\newcommand{\Hom}[3]{\text{Hom}_{#1}\left(#2, #3\right)}
+\newcommand{\iprod}[2]{\langle#1, #2\rangle}
+\newcommand{\gen}[1]{\left\langle#1\right\rangle}
+\newcommand{\coker}{\text{coker}}
+\newcommand{\im}{\text{im}}
+
+\theoremstyle{definition}
+\newtheorem{prob}{Problem}
+\newtheorem*{solution}{Solution}
+\newtheorem{definition}{Definition}[prob]
+\newtheorem{lemma}{Lemma}[prob]
+\newtheorem{theorem}{Theorem}[prob]
+\newtheorem*{claim}{Claim}

@@ -1,0 +1,59 @@
+\documentclass[11pt]{amsart}
+\pdfoutput=1
+
+\input{usepackage.tex}
+
+
+
+\usepackage{fullpage}
+
+\newcommand{\makeheading}[1]%
+        {\hspace*{-\marginparsep minus \marginparwidth}%
+         \begin{minipage}[t]{\textwidth}%
+                {\large \bfseries #1}\\[-0.15\baselineskip]%
+                 \rule{\columnwidth}{1pt}%
+         \end{minipage}}
+
+
+
+
+\input{newtheorem.tex}
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\makeheading{Amogh Parab, ID$500172839$ \hfill Lie Algebra}
+\bigskip
+
+\input{prob1.tex}
+
+\input{prob2.tex}
+
+\input{prob3.tex}
+
+\input{prob4.tex}
+
+\input{prob5.tex}
+
+%\input{prob6.tex}
+
+%\input{prob7.tex}
+
+\printbibliography
+
+\end{document}
+
+
+
+
+\begin{proof}
+    Let $f\geq 0$ be measurable. Consider $E_k=\{2^k<f\leq 2^{k+1}\}$, then $\{f>0\}=\sqcup_{-\infty}^\infty E_k$. Since $f$ is measurable the integration will split over countable disjoint union. Thus
+    \[
+        \int \abs{f}^p\ d\mu=\int f^p\ d\mu=\int_{\{f>0\}}f^p\ d\mu=\sum_{-\infty}^\infty \int_{E_k}f^p\ d\mu
+    \]
+    Now suppose $f\in L^p$, then $\lambda_f(\alpha)<\infty$ for $\alpha>0$. Since $\lambda_f(\alpha)=\mu\{\abs{f}>\alpha\}\leq \norm{f}_p^p/\alpha^p<\infty$. Thus $\mu(E_k)=\lambda_f(2^k)-\lambda_f(2^{k+1})$. We get
+    \[
+        \int\abs{f}^p\ d\mu=\sum_{-\infty}^\infty \int_{E_k}f^p\ d\mu\geq \sum_{-\infty}^\infty 2^{pk}\mu(E_k)=\sum_{-\infty}^\infty 2^{pk}(\lambda_f(2^k)-\lambda_f(2^{k+1}))
+    \]
+    Thus $\sum_{-\infty}^\infty 2^{pk}(\lambda_f(2^k)-\lambda_f(2^{k+1}))\leq \int\abs{f}^p\ d\mu<\infty$. Thus cancellation is valid and we get,
+    \[(1-1/2^p)\sum_{-\infty}^\infty 2\]
+\end{proof}
