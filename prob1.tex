@@ -39,5 +39,46 @@
 \end{definition}
 
 \begin{example}
-    
+    Let $_AM$ be a non-associative algebra. Let $\Der_A M$ be the $A$ module of derivations of $M$. Define for  $d_1, d_2\in \Der_A M$, $[d_1d_2]=d_1\circ d_2-d_2\circ d_1$. Then $(Der_AM, +, \cdot, [\ ], 0)$ is a Lie algebra.
 \end{example}
+
+\begin{example}
+    Let $L$ be a Lie algebra. The adjoint action of $x$ on $L$ is given by 
+    \[
+        \ad(x):y\mapsto [xy].
+    \]
+    Then $\ad(x)\in \Der_A L$.
+\end{example}
+
+\begin{definition}
+    A \textbf{morphism} of $\mu: L\to K$ of Lie algebras is an $A-$linear map s.t.
+    \[
+        \mu[xy]=[(\mu x)(\mu y)]
+    \]
+\end{definition}
+
+\begin{example}
+    $\ad:L\to \Der L$ is a morphism of Lie algebras over $A$.
+\end{example}
+
+\begin{definition}
+    A subset $K\subset L$ is called a \textbf{Lie subalgebra} if it is closed under all of its operations. Denoted $K\leq L$.
+\end{definition}
+
+\begin{definition}
+    A subalgebra $K\leq L$ is called a \textbf{Lie ideal} if for all $i\in I$ and $k\in K$, $[ik]\in K$. Denoted $K\triangleleft L$.
+\end{definition}
+
+\begin{example}
+    Let $f:L\to K$ be a Lie algebra morhpism, then $\ker f\triangleleft L$ and $\im f\leq K$.
+\end{example}
+
+\begin{definition}
+    Center of Lie algebra and inner automorphisms are defined as bellow,
+    \[
+        \begin{tikzcd}
+            0\arrow[r] &Z(L)\arrow[r] &L\arrow[rr, "\ad"]\arrow[rd]&&\Der_AL\arrow[r]&\Der_AL/\Inn_A L\arrow[r]&0\\
+            &&&\Inn_A L\arrow[ru]
+        \end{tikzcd}
+    \]
+\end{definition}
