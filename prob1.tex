@@ -1,95 +1,43 @@
-\begin{prob}\ \\
-    a.  The class median on the quiz you designed and wrote is 25\%.\\
-    b. The class median on the lecturer's exam is 25\%.
-\end{prob}
+\section{Lie Algebra}
+\begin{definition}
+    Let $A$ be a commutative ring. An \textbf{associative }$\mathbf{A-}$\textbf{algebra} is an $A$ module $_AR$ $(_AR, +, \cdot, 0)$ equipped with an associative $A$ bilinear multiplication
+    \[\mu: R\otimes_A R\to R\]
+    which has identity.
+\end{definition}
 
-\begin{solution}\ \\
-    a. I will reflect on my teaching and my quiz design too see where the students lost most of their points. If possible, I will try to curve the quiz score.\\
-    b. If lecturer wants to discuss about I will be happy to give my input. If lecturer wants I can take some revision tutorial.
-\end{solution}
+\begin{example}
+    Let $_AM$ be an $A-$module, $_AS=\End_A M$ is an $A-$algebra. For $f, g\in \End_A M$, $m\in _AM$ and $a\in A$ we have
+    \begin{enumerate}
+        \item $(f+g)(m)=f(m)+g(m)$
+        \item $(a\cdot f)(m)=a\cdot f(m)$
+        \item $\mu(f, g)(m)=(f\circ g)(m)$
+    \end{enumerate}
+\end{example}
 
-\begin{prob}
-    A student tells you that your grading is too harsh. What if several students tell you that?
-\end{prob}
+\begin{definition}
+    A \textbf{non associative }$\mathbf{A-}$\textbf{algebra} is an $A$ module $_AR$ $(_AR, +, \cdot, 0)$ equipped with an $A$ bilinear multiplication
+    \[\mu: R\otimes_A R\to R\].
+\end{definition}
 
-\begin{solution}
-    I will show them where they lost their points and for which step. Since the grading is universal I cannot change it. Also I will reflect on my grading if their cencern is genuine. 
-\end{solution}
+\begin{definition}
+    A \textbf{Lie Algebra} over $A$ is a non-associative algebra $_AL$ over $A$ satisfying
+    \begin{enumerate}
+        \item The Jacobi identity, $\forall x, y, z\in L$
+        \[
+            [x[yz]]+[z[xy]]+[y[zx]]=0.
+        \]
+        Here $[\ ]:L\times L\to L$ is bilinear multiplication.
+        \item $\forall x\in L$, $[xx]=0$
+    \end{enumerate}
+\end{definition}
 
-\begin{prob}
-    A day after group grading exams with several other TAs, a student's midterm is missing. You
-remember that the student took the exam. 
-\end{prob}
+\begin{definition}
+    Let $(_AM, +, \cdot, [\ ], 0)$ be a non-associative $A$ algebra. Define an $A$ derivation $d:M\to M$ to be an $A$ linear map s.t. Leibniz rule holds, i.e., for all $x, y\in M$
+    \[
+        d[xy]=[(dx)y]+[x(dy)] .  
+    \]
+\end{definition}
 
-\begin{solution}
-    I will look for the quiz paper again. I will consult with lecturer/coordinator about how to go about it, possible solutions maybe allowing the student to take the exam again/ giving the student average score.
-\end{solution}
-
-\begin{prob}\ \\
-    a. A student asks to go to the restroom during a quiz/midterm.\\
-    b. A student says he can do better on quizzes and tests if he wears headphones.\\
-    c.  A student shows up to class halfway through a quiz. What if it happens during a midterm? 
-\end{prob}
-
-\begin{solution}\ \\
-    a. If he asks towards the end of the quiz I will asks if they can hold. If not I will let them go and would not allow to take any devices with them.\\
-    b. I would strictly not allow the student to use headphones.\\
-    c. I will allow the student to sit for the exam but the student would not get any extra time. In the case where it is midterm and the excuse is genuine, I will give the student another sheet to finish the midterm at the end of the exam and consult with the instructor/co-ordinator about what need to be done.
-\end{solution}
-
-\begin{prob}
-    A student complains that you gave him no credit when his answer was right. When you look at his
-paper, you notice one of the following:\\
-a. None of the work was right, but the numerical answer was.\\
-b. There is no work, just the answer.\\
-c. His answer looks perfect. In fact, it looks exactly like the solution you showed the class right after
-you handed the papers back.
-\end{prob}
-
-\begin{solution}\ \\
-    a. I will give him the points allotted for the right answer in the rubric.\\
-    b. I will give him the points allotted for the right answer in the rubric.\\
-    c. I will give him the points for right answer and work giving the student the benefit of doubt. I will let the instructor know about my suspicion of cheating and have his answers recorded (photocopied) from that point onward.
-    d. I will give him the correct points.
-\end{solution}
-
-\begin{prob}\ \\
-    a. A parent calls you, asking about their daughter’s performance in the class. How do you respond?\\
-    b.  An academic advisor emails you, asking about a student’s performance in the class. How do you
-respond?\\
-    c. A student emails asking you to reply with their scores. How do you respond?
-\end{prob}
-
-\begin{solution}\ \\
-    a. I will respond with, ``I am not legally allowed to say anything.''
-    b. I will most likely defer my decision to course co-ordinator.
-    c. I will first ask if they cannot see their grades on the carmen/gradescope. If not and if the email is from osu.edu then I will reply with their grades (probably after consulting with the co-ordinator). 
-\end{solution}
-
-\begin{prob}
-    A student tells you that his roommate is taking the same class from someone else and they're doing
-grades/tests/homework/etc. differently. 
-\end{prob}
-
-\begin{solution}
-    I will let the course co-ordinator know about the concern.
-\end{solution}
-
-\begin{prob}
-    Several students complain to you that there is way too much homework assigned. What if it’s only one
-student who complains?
-\end{prob}
-
-\begin{solution}
-    If several students complain then I will let the instructor know about the concern. If there is only one student then I ask if he wants to take lower courseload.
-\end{solution}
-
-\begin{prob}
-    You collect homework every Thursday, but half of the students in your class turn it in late or not at all.
-Another fourth of the students turn in incomplete work. According to the lecturer's syllabus, the homework
-counts for 20\% of the students' final grade. 
-\end{prob}
-
-\begin{solution}
-    I will say to the whole class that the homework counts for 20\% of the final grade and they should take it more seriously. I will also warn them that from henceforth the late homework will be marked late.
-\end{solution}
+\begin{example}
+    
+\end{example}
